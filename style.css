@@ -26,7 +26,7 @@ nav{
 }
 
 .footer {
-  background-color: #7ca04c;
+  background-color: #7ca04c; /* Колір фону (зелений) */
   padding: 40px 0;
   text-align: center;
   color: white;
@@ -258,3 +258,4 @@ nav {
 .menu a:hover {
   color: #f0f0f0;
 }
+
