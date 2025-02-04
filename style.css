@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-  body, html {
+body, html {
     padding: 0;
     font-family: "Raleway";
     margin: auto;
@@ -65,7 +65,6 @@ nav{
   opacity: 0.8;
 }
 
-
 .text-about {  
 width: 499px;
 height: 339px;
@@ -81,13 +80,13 @@ flex: 1;
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .img-about {
     width: 500px;
     height: auto;
     border-radius: 10px;
-    float: left;
     margin-right: 20px;
 }
 
@@ -108,18 +107,15 @@ h3 {
   display: block;
   margin-block-start: 25px;
   margin-block-end: 25px;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
   font-weight: bold;
-  unicode-bidi: isolate;
 }
-
 
 .container {
     display: flex;
     justify-content: center;
     margin: auto;
     gap: 100px;
+    flex-wrap: wrap;
 }
 
 .category {
@@ -150,19 +146,19 @@ h3 {
   margin-top: 37px;
 }
 
-  .image-container {
+.image-container {
     position: relative;
     width: 500px;
     height: 300px;
-  }
-  
-  .image-container img {
+}
+
+.image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  
-  .overlay-text {
+}
+
+.overlay-text {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -171,9 +167,7 @@ h3 {
     font-size: 24px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  }
-
-
+}
 
 .banner {
     position: relative;
@@ -259,3 +253,66 @@ nav {
   color: #f0f0f0;
 }
 
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .logo {
+    left: 50px;
+  }
+  .menu {
+    gap: 40px;
+  }
+  .menu a {
+    right: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .img-about {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+  .text-about {
+    width: 100%;
+  }
+  .container {
+    gap: 30px;
+  }
+  .category {
+    height: auto;
+    width: 150px;
+    padding: 10px;
+  }
+  .tag {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+  .logo {
+    position: static;
+    margin-bottom: 10px;
+  }
+  .menu {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .menu a {
+    right: 0;
+  }
+  .banner {
+    height: 200px;
+  }
+  .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
